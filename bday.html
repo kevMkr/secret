@@ -1,1 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #89CFF0, #c7d6dd);
+      font-family: 'FangSong', cursive, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
 
+    .container {
+      text-align: center;
+      color: #fff;
+      text-shadow: 2px 2px 4px #000;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 4em;
+      margin-bottom: 0.5em;
+      animation: bounce 1s infinite;
+    }
+
+    p {
+      font-size: 1.5em;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(1);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .balloons {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background: url('https://i.imgur.com/6IUbEMf.png') repeat-x;
+      background-size: 100px 150px;
+      animation: float 10s linear infinite;
+      opacity: 0.3;
+      z-index: 0;
+    }
+
+    @keyframes float {
+      0% { background-position-y: 100%; }
+      100% { background-position-y: -200%; }
+    }
+
+    /* Updated Cloud Style */
+    .cloud-left, .cloud-right {
+      position: absolute;
+      top: 60px;
+      width: 200px;
+      height: auto;
+      z-index: 2;
+      opacity: 0.8;
+    }
+
+    .cloud-left {
+      left: 100px; /* moved closer to center */
+    }
+
+    .cloud-right {
+      right: 100px; /* moved closer to center */
+    }
+
+    /* Decorative vines/flowers */
+    .decor-left, .decor-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 150px;
+    height: auto;
+    z-index: 2;
+    opacity: 0.95;
+    }
+
+    .decor-left {
+    left: 20px;
+    transform: translateY(-50%) rotate(-5deg);
+    }
+
+    .decor-right {
+    right: 20px;
+    transform: translateY(-50%) rotate(5deg);
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Decorative side images -->
+  <img class="decor-left" src="paintercat.jpg" alt="Decoration Left">
+  <img class="decor-right" src="cheercat.jpg" alt="Decoration Right">
+
+
+  <!-- Clouds -->
+  <img class="cloud-left" src="clouds.png" alt="Cloud Left">
+  <img class="cloud-right" src="clouds.png" alt="Cloud Right">
+
+  <!-- Balloons -->
+  <div class="balloons"></div>
+
+  <!-- Main message -->
+  <div class="container">
+    <h1>Happy Birthday Jess! 🎉</h1>
+    <p>Hopefully your life would be less assignments and stress 🎈</p>
+    <p>Enjoy life much better!!!!!</p>
+  </div>
+</body>
+</html>
